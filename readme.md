@@ -1,8 +1,8 @@
-# Active
+# Port Scan
 ![Port scan](./image/port_scan.gif)
 
 ## Intriduction
-Active is a simple and efficient port scanner built in Rust. It checks if a specified port (or range of ports) on a target host is open or closed. Additionally, Active can display the name of the service associated with each open port.
+port_scan is a simple and efficient port scanner built in Rust. It checks if a specified port (or range of ports) on a target host is open or closed. Additionally, port_scan can display the name of the service associated with each open port.
 
 This project leverages multi-threading to enhance scanning speed, efficiently distributing the scan workload across available CPU cores. This approach significantly reduces the time needed to scan multiple ports.
 
@@ -14,7 +14,7 @@ This project leverages multi-threading to enhance scanning speed, efficiently di
 - **Service Name Display**: Optionally displays the name of the service running on open ports.
 
 ## Usage
-Run `active` with the desired options:
+Run `port_scan` with the desired options:
 
 ```bash
 $ active --help
@@ -77,16 +77,16 @@ Options:
 
 ## Multi-threading Implementation
 
-Active uses Rust's multi-threading capabilities to divide the range of ports across available CPU cores. This significantly reduces scanning time for larger port ranges. Each thread scans a subset of ports concurrently, making the scan faster and more efficient.
+port_scan uses Rust's multi-threading capabilities to divide the range of ports across available CPU cores. This significantly reduces scanning time for larger port ranges. Each thread scans a subset of ports concurrently, making the scan faster and more efficient.
 
 ## Installation and Compilation
 
-To compile Active from source:
+To compile port_scan from source:
 
 1. Clone the repository:
     ```bash
-    git clone <repository-url>
-    cd active
+    git clone https://github.com/alpapie/port_scan.git
+    cd port_scan
     ```
 
 2. Build the project:
@@ -96,9 +96,9 @@ To compile Active from source:
 
 3. Run the executable from the `target/release` directory:
     ```bash
-    ./target/release/active -t 127.0.0.1 -p 22-80
+    ./target/release/port_scan -t 127.0.0.1 -p 22-80
     ```
 
 ## Bonus
 
-Active can also display the name of the service associated with open ports, providing more insight into the services accessible on the scanned host.
+port_scan can also display the name of the service associated with open ports, providing more insight into the services accessible on the scanned host.
