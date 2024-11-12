@@ -72,7 +72,7 @@ impl UdpScan {
             handles.push(handler);
 
     
-            i += lap;
+            i += if lap>0 {lap}else{1};
         }
         for handle in handles {
             handle.join().unwrap();
