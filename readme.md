@@ -1,7 +1,7 @@
 # Port Scan
 ![Port scan](./image/port_scan.gif)
 
-## Intriduction
+## Introduction
 port_scan is a simple and efficient port scanner built in Rust. It checks if a specified port (or range of ports) on a target host is open or closed. Additionally, port_scan can display the name of the service associated with each open port.
 
 This project leverages multi-threading to enhance scanning speed, efficiently distributing the scan workload across available CPU cores. This approach significantly reduces the time needed to scan multiple ports.
