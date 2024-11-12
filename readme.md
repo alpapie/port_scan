@@ -64,17 +64,17 @@ Options:
     ```
 5. **Scan All Ports**
 
-    Using `-p` without a range will scan all ports (1-65535):
+    Using `-p` with `-` will scan all ports (1-65535):
 
     ```bash
-    $ active -t 10.53.224.5 -p
+    $ active -t 10.53.224.5 -p -
     Port 22 is open
     Port 80 is open
     Port 443 is open
     ...
     Port 65535 is closed
     ```
-
+    
 ## Multi-threading Implementation
 
 port_scan uses Rust's multi-threading capabilities to divide the range of ports across available CPU cores. This significantly reduces scanning time for larger port ranges. Each thread scans a subset of ports concurrently, making the scan faster and more efficient.
